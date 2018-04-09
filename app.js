@@ -47,7 +47,7 @@ var server = http.createServer((request, response) => {
     response.end('Sorry, unknown url')
   }
 })
-server.listen(webSocketsServerPort, () => {
+server.listen(process.env.PORT || webSocketsServerPort, () => {
   console.log((new Date()) + " Server is listening on port " + webSocketsServerPort)
 })
 
